@@ -42,6 +42,16 @@ min_tolerance<=f(mid)<=max_tolerance
 
 %}
 
+
+%{
+format long -- 16 digits
+format short -- 4 digits
+%}
+
+
 clear all; % Clear Variables in workspace
 clc; % Clear Output in CMD
+format long;
 
+f=@(x)x^4-x-10;
+ans=f(1);
