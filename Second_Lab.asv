@@ -1,3 +1,6 @@
+clear all; % Clear Variables in workspace
+clc; % Clear Output in CMD
+
 % Solving Non Linear Equations
 
 %{
@@ -31,17 +34,11 @@ And this process continues
 
 
 Case of Overflow and Underflow
-INTMAX -- b or INTMIN -- a
+INTMAX - b or INTMIN - a
 
 
 we never find exact root we always try to find approximate value
 we have tolerance value
 
-min_tolerance<=f(mid)<=max_tolerance
-
-
+min
 %}
-
-clear all; % Clear Variables in workspace
-clc; % Clear Output in CMD
-
