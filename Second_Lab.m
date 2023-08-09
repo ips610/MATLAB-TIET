@@ -73,7 +73,7 @@ else
     disp("Right Choice Of a & b");
     p=a+(b-a)/2;
     e=abs(f(p));
-
+    count=1;
     while e>10^-4
 
         if f(a)*f(p) <0
@@ -88,7 +88,10 @@ else
         
         p=a+(b-a)/2;
         e=abs(f(p));
+        count=count+1;
 
     end
+    fprintf("Root Is: %f \n", p);
+    fprintf("No of iterations: %d \n",count);
 
 end
