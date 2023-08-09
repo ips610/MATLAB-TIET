@@ -61,12 +61,15 @@ format long;
 
 f=@(x)x^4-x-10;
 
-a=1;
-b=2;
+a=0;
+b=5;
 
 if f(a) * f(b) > 0
+
     disp("Wrong Choice Of a & b");
+
 else 
+
     disp("Right Choice Of a & b");
     p=a+(b-a)/2;
     e=abs(f(p));
@@ -74,12 +77,17 @@ else
     while e>10^-4
 
         if f(a)*f(p) <0
+
             b=p;
-            p=a+(b-a)/2;
+
         else
+
             a=p;
-            p=a+(b-a)/2;
+            
         end
+        
+        p=a+(b-a)/2;
+        e=abs(f(p));
 
     end
 
