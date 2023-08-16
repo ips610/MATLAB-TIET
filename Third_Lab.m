@@ -100,9 +100,11 @@ while count <= max
     
     x1 = g(x0);
     e = abs(x1 - x0);
+    
     if e < tolerance
         break;
     end
+    fprintf("x %d = %f\n",count,x1 );
     x0 = x1;
     count = count + 1;
 end
