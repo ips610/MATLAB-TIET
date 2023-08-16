@@ -59,10 +59,10 @@ clear all; % Clear Variables in workspace
 clc; % Clear Output in CMD
 format long;
 
-f=@(x)x^4-x-10;
+f=input("Enter fxn: ");
 
-a=0;
-b=5;
+a=input("Enter the value of a: ");
+b=input("Enter the value of b: ");
 
 if f(a) * f(b) > 0
 
