@@ -43,6 +43,40 @@ then |g'(x)| <= k where k < 1 for all x belongs to (a,b)
 the roots of g(x) will be the roots of f(x)
 
 iterative method: x(i+1) = g(x(i)) this will only work if |g'(x)| satisfies
+|xn - xn-1 | < 10^-4 --> Tolerance
+
+
+Steps:
+f(x) = 0
+x = g(x)
+|g'(x)| < 1 at x = x0
+x1 = g(x0) --> |x1 - x0| = 0
+x2 = g(x1) --> |x2 - x1| = 0
+.               .
+.               .
+.               .
+xn = g(xn-1) --> |xn - xn-1| = 0 
+
+We don't wait till exact zero we will see if |xn - xn-1| < 10^-4
+We will break the loop once it is less than that tolerance value
 
 
 %}
+
+% Code 1 -- Similar to Bisection Method
+
+clear all;
+clc;
+
+% f(x) = @(x)x^3-7x+2;
+g(x) = @(x)(x^3+2)/7;
+
+x0 = 0;
+x1 = g(x0);
+
+e = abs(x1 - x0);
+while e>10^-4:
+
+    
+
+end
