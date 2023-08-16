@@ -104,6 +104,7 @@ while count <= max
         break;
     end
     x0 = x1;
+    count = count + 1;
 end
 
 fprintf("Final Root is: %f \n", x1);
