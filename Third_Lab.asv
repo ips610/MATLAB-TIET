@@ -69,14 +69,37 @@ clear all;
 clc;
 
 % f(x) = @(x)x^3-7x+2;
-g(x) = @(x)(x^3+2)/7;
+g = @(x)(x^3+2)/7;
 
 x0 = 0;
 x1 = g(x0);
 
 e = abs(x1 - x0);
-while e>10^-4:
+while e>10^-4
 
+    x0 = x1;
+    x1 = g(x0);
+    e = abs(x1 - x0);
+
+end
+
+fprintf("Final Root is: %f \n", x1)
+
+
+% Code 2
+clear all;
+clc;
+
+g = input("Enter g(x): ");
+x0 = input("Enter iitial guess: ");
+
+max = input("Enter Max No. of Iterations: ");
+tolerance = input("Enter tolerance value");
+count = 1;
+while count <= max 
     
-
+    x1 = g(x0);
+    e = abs(x1 - x0);
+    if e < tolerance
+        break;
 end

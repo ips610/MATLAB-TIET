@@ -84,3 +84,26 @@ while e>10^-4
 end
 
 fprintf("Final Root is: %f \n", x1)
+
+
+% Code 2
+clear all;
+clc;
+
+g = input("Enter g(x): ");
+x0 = input("Enter initial guess: ");
+
+max = input("Enter Max No. of Iterations: ");
+tolerance = input("Enter tolerance value: ");
+count = 1;
+while count <= max 
+    
+    x1 = g(x0);
+    e = abs(x1 - x0);
+    if e < tolerance
+        break;
+    end
+    x0 = x1;
+end
+
+fprintf("Final Root is: %f \n", x1);
