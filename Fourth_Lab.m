@@ -26,13 +26,14 @@ generally
 
 %}
 
-syms x;
+% syms x;
 clear all;
 clc;
 
 f = input("Enter function f: ");
 x0 = input("Enter initial guess: ");
-df = inline(diff(f(x)));
+% df = inline(diff(f(x)));
+df = input("Enter derivative function: ");
 tolerance = ("Enter tolerance: ");
 max = input("Enter Maximum no of iterations: ");
 count = 1;
