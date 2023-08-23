@@ -34,7 +34,7 @@ f = input("Enter function f: ");
 x0 = input("Enter initial guess: ");
 % df = inline(diff(f(x)));
 df = input("Enter derivative function: ");
-tolerance = ("Enter tolerance: ");
+tolerance = input("Enter tolerance: ");
 max = input("Enter Maximum no of iterations: ");
 count = 1;
 
@@ -54,3 +54,5 @@ if df(x0) ~= 0
 else
     disp("Newton's Method Fails");
 end
+
+fprintf("Root is %.10f \n", x1);
