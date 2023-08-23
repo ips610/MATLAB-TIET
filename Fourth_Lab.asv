@@ -16,9 +16,26 @@ x2 = x1 - f(x1)/f'(x1)
 .
 
 
-Stopping Criteria
------------------
+Stopping Criterias
+------------------
+
 |f(x[n]| < tolerance  ---> Bisection Mehtod Majorly
 (x[n]-x[n-1]) < tolerance ---> Generally Used
-|x[n]-x[n-1
+|x[n]-x[n-1]|/|x[n]| < tolerance ---> Give More Closed Ans but we don't it
+generally
+
 %}
+
+syms x;
+clear all;
+clc;
+
+f = input("Enter function f: ");
+x0 = input("Enter initial guess: ");
+df = inline(diff(f(x)));
+
+if df(x0) ~= 0
+
+else
+    disp("Newton's Method Fails")
+end
