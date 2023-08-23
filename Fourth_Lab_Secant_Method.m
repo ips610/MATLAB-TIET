@@ -39,7 +39,7 @@ count = 1;
 
 while count <= max
 
-    x2 = x1 - ((x1-x0)/f(x1)-f(x0))*f(x1);
+    x2 = x1 - ((x1-x0)/(f(x1)-f(x0)))*f(x1);
     e = abs(x2 - x1);
 
     if e < tolerance
