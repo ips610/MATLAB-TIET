@@ -17,8 +17,7 @@ x2 = x1 - f(x1)/f'(x1)
 
 
 
-x[n+1] = x[n] - m(f(x[n])/f'(x[n])) ----> For Multiple Roots 
-m is multiplicity
+x[n+1] = x[n] - m(f(x[n])/f'(x[n])) ----
 Stopping Criterias
 ------------------
 
