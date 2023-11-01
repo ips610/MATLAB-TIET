@@ -101,6 +101,7 @@ end
 A
 
 x = zeros(1,n);
+x
 for i = n: -1: 1
     x(i) = ((A(i,m) - sum(A(i,1:n) .* x)) / (A(i,i)));
 end
