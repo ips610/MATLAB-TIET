@@ -15,7 +15,8 @@ for j=2:n
 end
 
 for i=1:size(x,2)-1 %size(x,2) means column      size(x,1) means row
-    prodx = prod(X-x(:,1:i))*DD(1,i+1);
+    prodx = prod(X-x(:,1:i))*DD(1,i+1); 
+    % X - x(1:i,:)
     P(i) = prodx;
 end
 
