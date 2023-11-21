@@ -89,7 +89,7 @@ clc;
 
 
 
-A = [2 3 4 19; 4 11 14 55; 2 8 17 50];
+A = [6 3 2 6; 6 4 3 0; 20 15 12 0];
 [n,m] = size(A);
 for i = 1: n - 1
     for k = i + 1: n
@@ -98,10 +98,9 @@ for i = 1: n - 1
     end
 end
 
-A
 
 x = zeros(1,n);
-x
+
 for i = n: -1: 1
     x(i) = ((A(i,m) - sum(A(i,1:n) .* x)) / (A(i,i)));
 end
