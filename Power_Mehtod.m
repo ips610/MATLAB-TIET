@@ -12,7 +12,7 @@ while (error > tolerance)
     eigen_value = max(abs(y));
     eigen_vector = y./eigen_value;
     x=eigen_vector;
-    error = abs(sum(x-xold));
+    error = abs(sum(xold-x));
     ans=eigen_value;
 end
 
