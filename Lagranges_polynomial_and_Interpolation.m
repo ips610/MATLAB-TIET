@@ -1,11 +1,15 @@
-clc;
-clear all;
-x = [0 0.25 0.5 0.75];
-f = [1 1.64872 2.71828 4.48169];
-X = input("Input Size: ");
-for i=1:length(x)
-    x1 = x;
-    x1(i) = [];
-    l(i) = prod(X-x1)/prod(x(i)-x1);
+
+x=[1; 2; 3];
+f=[1; 4; 9];
+p=5;
+L=[1; 1; 1];
+sum=0;
+for i=1:1:3
+    for j=1:1:3
+        if(i~=j)
+            L(i)=(p-x(j))/(x(i)-x(j))*L(i);
+        end
+    end
+    sum=sum+f(i)*L(i);
 end
-F=sum(l.*f);
+sum
